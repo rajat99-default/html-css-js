@@ -1,5 +1,4 @@
 
-// Data fetch form innerHTML by json server
 function register(){
     
     let nam = document.getElementById('nam').value;
@@ -24,7 +23,7 @@ function register(){
         body:JSON.stringify(obj)
     }).then(alert("Registration Successfull"))
 }
-// Data show on innerHTML by async function
+
 
 async function load(){
     let data = await fetch('http://localhost:3000/registration')
@@ -54,31 +53,6 @@ function del(id){
 function update(id){
     document.getElementById('showdata').style.display = "block";
     storeid = id;
-}
-function updatedata(){
-     
-    let nam = document.getElementById('nam').value;
-    let uname = document.getElementById('uname').value;
-    let mob = document.getElementById('mob').value;
-    let pass = document.getElementById('pass').value;
-    let cpass = document.getElementById('cpass').value;
-    
-    let obj ={
-        Names:nam,
-        Username:uname,
-        Number:mob,
-        Password:pass,
-        Confirm_password:cpass
-    }
-
-    fetch(`http://localhost:3000/registration/${storeid}`,{
-        method:"PUT",
-        headers:{
-            "Content-Type":"application/json"
-        },
-        body:JSON.stringify(obj)
-
-    })
 }
 
  
