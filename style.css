@@ -82,6 +82,7 @@ th {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    z-index: 1;
 }
 
 #login-button:hover {
@@ -92,9 +93,50 @@ th {
 /* ===========================================LOGIN=========================== */
 
 
-/* ===========================================LOGIN PAGE=========================== */
+
+/* ============================================carousel============================================ */
+
+
+
+.carousel-container {
+    position: relative;
+    max-width: 1800px;
+    max-height: 301px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: white;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  } 
 
 
 
 
-/* ===========================================LOGIN PAGE=========================== */
+
+/* ============================================carousel============================================ */
